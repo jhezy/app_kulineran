@@ -9,12 +9,21 @@ class KeranjangPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: lightGray,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: white,
+        title: Text(
+          'Keranjang',
+          style: blackTextStyle.copyWith(
+            fontSize: 22,
+            fontWeight: bold,
+          ),
+        ),
+      ),
       body: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 22, vertical: 22),
+        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 22),
         children: [
           Container(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             height: 102,
             width: double.infinity,
             decoration: BoxDecoration(
@@ -57,7 +66,6 @@ class KeranjangPage extends StatelessWidget {
                         ),
                         SizedBox(width: 40),
                         CounterPage(),
-                        
                       ],
                     ),
                   ],

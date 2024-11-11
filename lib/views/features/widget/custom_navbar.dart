@@ -20,6 +20,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
     return AppBar(
       backgroundColor: white,
       leading: IconButton(
+        color: black,
         onPressed: () {
           Navigator.pop(context);
         },

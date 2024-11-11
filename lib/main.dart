@@ -19,17 +19,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<LoginService>(create: (_) => LoginService()), // Provide LoginService
+        Provider<LoginService>(
+            create: (_) => LoginService()), // Provide LoginService
         Provider<LoginBloc>(
-          create: (context) => LoginBloc(loginService: Provider.of<LoginService>(context, listen: false)), // Pass LoginService to LoginBloc
+          create: (context) => LoginBloc(
+              loginService: Provider.of<LoginService>(context,
+                  listen: false)), // Pass LoginService to LoginBloc
         ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-          // Add your app theme here
-        ),
+            // Add your app theme here
+            ),
         routes: {
           '/': (context) => const Splash(),
           '/onboarding': (context) => const Onboarding(),
@@ -41,5 +44,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
